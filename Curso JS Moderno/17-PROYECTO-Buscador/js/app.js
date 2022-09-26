@@ -31,6 +31,9 @@ function mostrarAutos() {
 /** Genera los años del select */
 function llenarSelect() {
   for (let i = max; i >= min; i--) {
-    console.log(i);
+    const opcion = document.createElement("option");
+    opcion.value = i;
+    opcion.textContent = i;
+    year.appendChild(opcion);/** Agrega las opciones de año al select */
   }
 }
