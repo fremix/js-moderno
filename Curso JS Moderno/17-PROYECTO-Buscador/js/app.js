@@ -1,8 +1,28 @@
 /** Variables */
-const resultado = document.querySelector("#resultado");
+const marca = document.querySelector("#marca");
 const year = document.querySelector("#year");
+const minimo = document.querySelector("#minimo");
+const maximo = document.querySelector("#maximo");
+const puertas = document.querySelector("#puertas");
+const transmision = document.querySelector("#transmision");
+const color = document.querySelector("#color");
+
+/** Contenedor para resultados */
+const resultado = document.querySelector("#resultado");
+
 const max = new Date().getFullYear();
 const min = max - 10;
+
+/** Generar un objeto con la búsqueda */
+const datosBusqueda = {
+  marca: "",
+  year: "",
+  minimo: "",
+  maximo: "",
+  puertas: "",
+  transmision: "",
+  color: "",
+};
 
 /** Eventos */
 document.addEventListener("DOMContentLoaded", () => {
@@ -11,6 +31,9 @@ document.addEventListener("DOMContentLoaded", () => {
   /** Llena las opciones de años */
   llenarSelect();
 });
+
+/** Event listener para los select de busqueda */
+
 
 /** Funciones */
 function mostrarAutos() {
@@ -34,6 +57,6 @@ function llenarSelect() {
     const opcion = document.createElement("option");
     opcion.value = i;
     opcion.textContent = i;
-    year.appendChild(opcion);/** Agrega las opciones de año al select */
+    year.appendChild(opcion); /** Agrega las opciones de año al select */
   }
 }
